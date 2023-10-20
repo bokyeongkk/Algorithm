@@ -1,6 +1,4 @@
-package programmers.cordingtest.day4;
-
-import java.util.Arrays;
+package programmers.cordingtest.level1.day4;
 
 public class FindPrimeNumber {
 

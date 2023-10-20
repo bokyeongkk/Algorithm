@@ -1,6 +1,4 @@
-package programmers.cordingtest.day2;
-
-import java.util.Arrays;
+package programmers.cordingtest.level1.day2;
 
 public class SumTwoNum {
 

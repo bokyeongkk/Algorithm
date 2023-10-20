@@ -1,6 +1,4 @@
-package programmers.cordingtest.day3;
-
-import java.util.*;
+package programmers.cordingtest.level1.day3;
 
 public class StringInPAndY {
     /*

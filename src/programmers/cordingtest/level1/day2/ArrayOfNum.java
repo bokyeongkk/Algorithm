@@ -1,4 +1,4 @@
-package programmers.cordingtest.day2;
+package programmers.cordingtest.level1.day2;
 
 import java.util.*;
 
