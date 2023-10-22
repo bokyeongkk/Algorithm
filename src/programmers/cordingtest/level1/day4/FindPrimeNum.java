@@ -1,6 +1,6 @@
 package programmers.cordingtest.level1.day4;
 
-public class FindPrimeNumber {
+public class FindPrimeNum {
 
     /*
         소수 찾기
@@ -18,8 +18,8 @@ public class FindPrimeNumber {
         int n = 10;
         //int n = 5;
 
-        FindPrimeNumber findPrimeNumber = new FindPrimeNumber();
-        int result = findPrimeNumber.solution1(n);
+        FindPrimeNum findPrimeNum = new FindPrimeNum();
+        int result = findPrimeNum.solution1(n);
         System.out.println(result);
     }
 
