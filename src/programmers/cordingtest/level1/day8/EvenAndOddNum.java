@@ -3,6 +3,7 @@ package programmers.cordingtest.level1.day8;
 import java.util.Arrays;
 
 public class EvenAndOddNum {
+
     /*
         짝수와 홀수
 
