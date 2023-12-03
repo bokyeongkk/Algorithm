@@ -26,6 +26,7 @@ public class MatrixSum {
         int[][] result = matrixSum.solution1(arr1, arr2);
 
         // 2차원 배열의 값을 문자열로 출력
+        System.out.println("result: ");
         System.out.println(Arrays.deepToString(result));
 
         // [[4, 6], [7, 9]]

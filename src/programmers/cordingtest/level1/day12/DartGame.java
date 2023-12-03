@@ -49,7 +49,7 @@ public class DartGame {
 
         DartGame dartGame = new DartGame();
         int result = dartGame.solution1(dartResult);
-        System.out.println(result);
+        System.out.println("result: "+result);
 
         // 37 (1¹ * 2 + 2² * 2 + 3³)
         // 9 (1² + 2¹ * (-1) + 10¹
