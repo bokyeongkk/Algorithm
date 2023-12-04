@@ -54,47 +54,32 @@ public class NumPartner {
         //String Y = "1255";
 
         NumPartner numPartner = new NumPartner();
-        String result = numPartner.solution2(X, Y);
+        String result = numPartner.solution(X, Y);
         System.out.println(result);
     }
 
-    public String solution1(String X, String Y) {
-        String answer = "";
+    public String solution(String X, String Y) {
+        StringBuilder answer = new StringBuilder();
 
-        // 리스트로 만들어 놓고
-        // 하나씩 지우면서 공통 된 수 만들면 되겠지..
+        int[] x = new int[10];
+        int[] y = new int[10];
 
-        // 그리고 배열을 내림차순해서 큰 수로 만들기
-
-
-
-        return answer;
-    }
-
-    public String solution2(String X, String Y) {
-        StringBuilder str = new StringBuilder();
-
-        int[] xArr = new int[10];
-        int[] yArr = new int[10];
-
-        for(String x : X.split("")) {
-            xArr[Integer.parseInt(x)]++;
+        for(int i=0; i<X.length(); i++) {
+            x[X.charAt(i) - '0']++;
         }
-        for(String y: Y.split("")) {
-            yArr[Integer.parseInt(y)]++;
+        for(int i=0; i<Y.length(); i++) {
+            y[Y.charAt(i) - '0']++;
         }
 
         for(int i=9; i>=0; i--) {
-            while(xArr[i] > 0 && yArr[i] > 0) {
-                str.append(i);
+            for(int j=0; j<Math.min(x[i], y[i]); j++) {
+                answer.append(i);
             }
         }
 
-        if("".equals(str.toString())) return "-1";
-        if("0".equals(str.toString().substring(0,1))) return "0";
+        if(answer.length() == 0) return "-1";
+        if(answer.charAt(0) == '0') return "0";
 
-        String answer = str.toString();
-        return answer;
+        return answer.toString();
     }
-
 }
