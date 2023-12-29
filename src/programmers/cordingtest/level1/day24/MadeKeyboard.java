@@ -73,7 +73,6 @@ public class MadeKeyboard {
         int[] result = madeKeyboard.solution(keymap, targets);
         System.out.println("문자열을 작성하기 위해 키를 최소 몇 번씩 눌러야 하는지: ");
         System.out.println(Arrays.toString(result));
-
     }
 
     public int[] solution(String[] keymap, String[] targets) {
