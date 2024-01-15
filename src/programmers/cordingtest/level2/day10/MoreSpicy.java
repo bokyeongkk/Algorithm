@@ -1,5 +1,7 @@
 package programmers.cordingtest.level2.day10;
 
+import java.util.*;
+
 public class MoreSpicy {
     /*
         더 맵게
@@ -50,6 +52,33 @@ public class MoreSpicy {
 
     public int solution(int[] scoville, int K) {
         int answer = 0;
+
+        // 힙을 선언 후 scoville 배열의 원소를 넣어준다.
+        PriorityQueue<Integer> heap = new PriorityQueue<Integer>();
+        for (int i=0; i<scoville.length; i++) {
+            heap.add(scoville[i]);
+        }
+
+        // heap에서 제일 작은 값(minHeap.peek())이 K보다 작을 때 while문을 반복한다.
+        while(heap.peek()<K){
+            int min1=heap.poll();
+            int min2=heap.poll();
+
+            // 작은 값 두 개를 꺼내 스코빌 지수를 계산한 후 힙에 넣고 answer값을 1 증가시킨다.
+            int scov = min1+min2*2;
+            heap.add(scov);
+            answer++;
+
+            // 제일 작은 값이 K 이상이면 break;
+            if(heap.peek()>=K) break;
+
+            // 마지막수가 K보다 작고 heap의 크기가 1일 때 answer=1 반환
+            if(heap.size()==1&&heap.peek()<K) {
+                answer=-1; break;
+            }
+        }
+
+
         return answer;
     }
 }
